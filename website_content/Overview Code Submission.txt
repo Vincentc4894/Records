@@ -1,21 +1,14 @@
-    {
-        id: 'raspbot',
-        name: 'Raspbot V2',
-        description: 'The Raspbot V2 is a beginner-friendly robot car that runs on the Raspberry Pi. This repository includes code and documentation for setting up the Raspbot, controlling its movement, and incorporating basic computer vision features. This repo teaches students motor control, obstacle avoidance, and basic computer vision using Python.',
-        image: 'raspbot.jpg',
-        difficulty: 'Robotics 2',
-        tags: ['Raspberry Pi', 'Educational', 'Python'],
-        sections: [
             {
                 id: 'overview',
                 label: 'Overview',
                 content: `
-                <h2> Introduction </h2>
+                <h1> Overview </h1>
                 <div class="doc-note warning">
                     <strong>Please read carefully before operating the robot.</strong>
                 </div>
-                <p>Raspbot V2 is a good introduction into robotics. It has simple and easy to learn features and commands but that also allows for a lot of creativity on your part to make it do what you want. </p>
-                <div> Important Notes before Operation </div>
+                <h2> Introduction </h2>
+                <p>Raspbot V2 is a good introduction into robotics. It has simple and easy to learn features and commands but that also allows for a lot of creativity on your part to make it do what you want. Remember, this is a beginner course so everthing will be introduced to you under the presumption that you have little to no experience, and will start easy to build your knowledge. </p>
+                <h2> Important Notes before Operation </h2>
                 <ul>
                 <li> The robot will drive into walls/people/other objects if you let it. </li>
                 <li> Be careful where you set the robot to run as to not let it drive under people, out of doors, etc. </li>
@@ -32,7 +25,7 @@
                 <li> A buzzer that can be called and controlled in scripts. </li>
                 <li> Camera reading capabilities, including light and color detection, video and photos, and script implementation. </li>
                 <li> Infared detection/vision with capabilities to use a remote control.  </li>
-                <li> Ultrasonic detection to measure the distance from an object. (write more or better)</li>
+                <li> Ultrasonic detection to measure the distance from an object.</li>
                 </ul>
 
                 <h2> Physical Features </h2>
@@ -78,8 +71,32 @@
                 <li> Python is one of the most beginner friendly coding languages, so don't be intimidated with coding, it starts very easy. </li>
                 <li> You will be given starter code snippits and segments if you look throughout the <strong>Basic Examples</strong> and <strong>Advance Samples</strong> tabs so use those to your advantage. </li>
                 </ul>
-                <div> Ros2 </div>
+                <div> ROS2 </div>
+                <ul>
+                <li> Robot Operating System 2. </li>
+                <li> Used for real time controls and operations. </li>
+                </ul>
                 <div> Docker </div>
+                <ul>
+                <li> Used as a deployment environment. </li>
+                <li> Secure, reproducable, and self-contained. </li>
+                </ul>
+                <h2> Last Notes </h2>
+                <ul>
+                <li> Make sure to re-read the <strong> Important Notes before Operation </strong> section again because they are good things to remember. </li>
+                <li> Read your lab/assignment instructions twice before starting. It's better to go slow then do things over again because you messed up. </li>
+                <li> If you ever get overwelmed by anything, check the other tabs in this webpage. 
+                    <ul>
+                    <li> <strong> Basic Examples </strong> and <strong> Advanced Examples </strong> will help with assignments the most. </li>
+                    </ul> 
+                </li>
+                <li> <strong> If you encounter problems </strong>, check the <strong> Common Issues </strong> tab, it may hold solutions. 
+                    <ul>
+                    <li> If it doesn't list the problem you are experiencing or a solution for your problem, contact a TA or your professor. </li>
+                    </ul> 
+                </li>
+                <li> Go to your TA's or Professor with any questions or clarifications. </li>
+                <ul>
 
                 `
             },
