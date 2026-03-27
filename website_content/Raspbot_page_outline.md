@@ -2,10 +2,10 @@
 
 <h1> Important Notes </h1> 
       - (main page seen when we click on 'Raspbot')
-      - (Tyler Yarbrough, Should be finished under Overview Submission Code commit)
+      <br>- (Tyler Yarbrough, Should be finished under Overview Submission Code commit)
 <h1> Overview </h1>
       - Contains high level info on hardware, software, key features
-      - (Tyler Yarbrough, Should be finished under Overview Submission Code commit unless we want more detail added on a seperate tab)
+      <br>- (Tyler Yarbrough, Should be finished under Overview Submission Code commit unless we want more detail added on a seperate tab)
 <h1>Getting Started</h1>
     <h3> Setting up the robot </h3>
         - turning it on, things to watch out for
