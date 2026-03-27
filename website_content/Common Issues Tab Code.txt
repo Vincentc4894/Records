@@ -1,4 +1,4 @@
-{
+            {
                 id: 'common-issues',
                 label: 'Common Issues',
                 content: `
@@ -23,7 +23,7 @@
                 <h2> Ros2 Issues </h2>
 
                 <div> Issue: ValueError: bad marshal data </div>
-                <p> Fix: TBD </p>
+                <p> Fix: Let the Professor know.  </p>
 
 
                 <h2> Undocumented Issues </h2>
@@ -33,9 +33,11 @@
 
 
                 <h2> How to Properly Report an Issue </h2>
-                <p> It is better to report an issue earlier then spending a lot of class time trying to debug it on your own, if the known fixes don't work, report the issue to a TA or Professor.</p>
-                <p> Tell your TA or Professor what issue you are encountering, what (if any) fixes you've attempted, and what caused this problem (if you know).
-                <br> <i>Example 1:</i> I have <strong> x issue</strong> when I do <strong> y </strong>. I've tried <strong> fix z </strong> I found on the Common Issues page but it didn't work.
-                <br> <i>Example 2:</i> I have <strong> x issue </strong>. I don't know what caused it and it's not on the Common Issues page. </p>
+                <p> It is better to <strong> report an issue earlier </strong> then spending a lot of class time trying to debug it on your own, if the known fixes don't work, report the issue to a TA or Professor.</p>
+                <p> Tell your TA or Professor what <strong> issue you are encountering </strong>, what (if any) <strong> fixes you've attempted </strong>, and what <strong> caused this problem </strong> (if you know). </p>
+                <ul>
+                <li> <i>Example 1:</i> I have <strong> x issue</strong> when I do <strong> y </strong>. I've tried <strong> fix z </strong> I found on the Common Issues page but it didn't work. </li>
+                <li> <i>Example 2:</i> I have <strong> x issue </strong>. I don't know what caused it and it's not on the Common Issues page. </li>
+                </ul>
                 `
             },
