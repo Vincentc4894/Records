@@ -44,9 +44,9 @@
                     <ul>
                     <li> There may be a warning about the connection being unencrypted. </li>
                     </ul>
-                <li>When prompted, enter ‘pi' as the username and ‘yahboom’ as the password. ,/li>
+                <li>When prompted, enter <i> pi </i> as the username and <i> yahboom </i> as the password. </li>
                     <ul>
-                    <li> Be sure to click ‘Remember password’ when connecting or it may fail. </li>
+                    <li> Be sure to click 'Remember password' when connecting or it may fail. </li>
                     </ul>
                 </ul>
                 </p>
