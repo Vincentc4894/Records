@@ -10,7 +10,6 @@
                 <li> See <strong> How to Properly Report an Issue </strong> section at the bottom of the page when reporting an issue. </li>
                 </ul>
 
-
                 <h2> Camera Issues </h2>
 
                 <div> Issue: Touching camera wire caused camera crash <div>
@@ -30,7 +29,7 @@
                 
                 <div> Issue: Unknown/Undocumented </div>
                 <p> Fix: Try turning robot off and back on again. If issue remains/repeats, let a TA or Professor know of the issue. </p>
-
+                <ul> <li> If the issue is resolved, let the Proffesor or TA know at the end of class what issue you encountered and that it fixed itself on restart </li> </ul>
 
                 <h2> How to Properly Report an Issue </h2>
                 <p> It is better to <strong> report an issue earlier </strong> then spending a lot of class time trying to debug it on your own, if the known fixes don't work, report the issue to a TA or Professor.</p>
@@ -40,4 +39,4 @@
                 <li> <i>Example 2:</i> I have <strong> x issue </strong>. I don't know what caused it and it's not on the Common Issues page. </li>
                 </ul>
                 `
-            },
+            }
