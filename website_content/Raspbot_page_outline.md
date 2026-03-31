@@ -7,7 +7,7 @@
       - Contains high level info on hardware, software, key features
       <br>- (Tyler Yarbrough, Should be finished under Overview Submission Code commit unless we want more detail added on a seperate tab)
 <h1>Getting Started</h1>
-    <br> (Tyler Yarbrough, started work on this)
+    <br> (Tyler Yarbrough, Prelim code segment uploaded. Needs to be formatted with someone with more expierence in HTML)
     <h3> Setting up the robot </h3>
         - turning it on, things to watch out for
     <h3> Connect via app </h3>
