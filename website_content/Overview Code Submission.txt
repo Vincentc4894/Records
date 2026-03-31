@@ -13,7 +13,7 @@
                 <li> The robot will drive into walls/people/other objects if you let it. </li>
                 <li> Be careful where you set the robot to run as to not let it drive under people, out of doors, etc. </li>
                 <li> Be careful with the wires, circut boards, camera, and ports when handling the robots. </li>
-                <li> When you start testing your own code, do so with your robot elevated <strong>(wheels not touching the ground)</strong>, so the robot doesn't drive randomly. </li>
+                <li> When you start testing your own code, do so with your robot elevated <strong>(wheels not touching the ground)</strong>, so the robot doesn't drive around randomly. </li>
                 <li> Make sure the camera is plugged in <strong>before</strong> turning on the robot so it'll work properly. Also make sure to unplug the camera <strong>before</strong> you put it away for storage.</li>
                 <li> Make sure camera servos are aligned on startup (Call TA or Professor if you are unsure). </li>
                 </ul>
@@ -84,16 +84,14 @@
                 <h2> Last Notes </h2>
                 <ul>
                 <li> Make sure to re-read the <strong> Important Notes before Operation </strong> section again because they are good things to remember. </li>
-                <li> Read your lab/assignment instructions twice before starting. It's better to go slow then do things over again because you messed up. </li>
+                <li> Read your lab/assignment instructions twice before starting. It's better to go slow than do things over again because you messed up. </li>
                 <li> If you ever get overwelmed by anything, check the other tabs in this webpage. 
                     <ul>
-                    <li> <strong> Basic Examples </strong> and <strong> Advanced Examples </strong> will help with assignments the most. </li>
+                    <li> <strong> Basic Examples </strong> will help with basic robot operations, giving you a good starting point or base for your assignment. </li>
+                    <li> <strong> Advanced Examples </strong> will help you understand the advanced robot operations, giving you more insight into higher level topics and functions. </li>
                     </ul> 
                 </li>
                 <li> <strong> If you encounter problems </strong>, check the <strong> Common Issues </strong> tab, it may hold solutions. 
-                    <ul>
-                    <li> If it doesn't list the problem you are experiencing or a solution for your problem, contact a TA or your professor. </li>
-                    </ul> 
                 </li>
                 <li> Go to your TA's or Professor with any questions or clarifications. </li>
                 <ul>
