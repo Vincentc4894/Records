@@ -18,7 +18,18 @@
                 <li> It may take a while for the robot to boot; however, if the robot hasn't beeped in 2-3 minutes, turn it off and back on. </li>
                 </ul>
 
+                <h2> Connecting a Device to the Robot's Network </h2>
+                <p> Upon starting the robot, a network should appear under wifi like, <i> Raspbot# </i> where <i>#</i> is the number on the sticker of the box of the robot. The password for this network is <i> 12345678 </i> </p>
+
                 <h2> Connecting via app </h2>
+                <p> To test with the app, Download the MakerControl app by Yahboom. You can find a QR code on the following site under the 'Downloads' section. </p>
+                <p> <i> https://www.yahboom.net/study/RASPBOT-V2 </i> </p> 
+                <ul>
+                <li> Make sure your device is on the same network as the robot. </li>
+                <li> To connect via the app, open the app, and the robot should appear automatically to prompt you to connect. </li>
+                <ul> <li> If automatic connect does not work, use the IP address displayed on the OLED screen on top of the robot, select “manual connect”, and type in the robot's IP address. </li> </ul>
+                </ul> 
+                <p> You should be connected to the app now. </p>
 
 
                 <h2> Connecting via JupyterLab </h2>
@@ -64,13 +75,15 @@
                 <p> Then run in the same terminal,
                 <br> <code> docker exec -it <i> "container_ID" </i> /bin/bash </code>
                 <p> You now have two docker terminals to use, run, and retrieve programs from, allowing different applications to run independently. </p>
+                <p> To exit your dockers, go back to your original terminal and run,
+                <br> <code> exit </code>
+                
                 <h3> Quick Guide </h3>
                 <strong>Terminal 1</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Terminal 2</strong>
                 <br> <strong> 1. </strong> <code> source docker_ros2.sh </code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <strong> 2. </strong> <code> docker ps -a </code>
-                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br> <strong> 4. </strong> <code> exit </code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <strong> 3. </strong> <code> docker exec -it "container_ID" /bin/bash </code>
-                <br>
                 `
             },
