@@ -42,6 +42,11 @@
                 <p> Open a browser (second icon from the top left) and type into the search bar, </p>
                 <code> localhost:8888/lab </code>
                 <ul> <li> The password is: <i> yahboom </i> </li> </ul>
+
+                <h3> Using JupyterLab </h3>
+                <p> You can access and run the pre-existing code on your robot or make your own in JupyterLab. </p>
+                <p> To run programs, you can either hit the <i> "Restart and run all cells" </i> button that looks like two arrows or the <i> "Run next cell" </i> button that looks like one arrow. </p>
+                <p> JupyterLab supports many languages but the Raspbot V2 uses Python. </p>
                 
                 
 
@@ -60,6 +65,13 @@
                     </ul>
                 </ul>
                 </p>
+
+                <h3> Using VNC Viewer </h3>
+                <p> VNC Viewer is how you'll be viewing robot. You can access JupyterLab, Terminals, the Camera app, and much more through VNC Viewer. </p>
+                <p> In the VNC Viewer window, the apps you'll use the most are at the top hotbar, with the other apps in the dropdown menu at the left side of that hotbar. 
+                <ul> <li> It's recommended to look through these briefly just to know where everything is. </li>
+                <li> Note that it may take a while to open applications, make sure to not open the application multiple times while its still opening. </ul> </p>
+
 
 
                 <h2> Entering the Docker Container </h2>
@@ -80,7 +92,7 @@
                 <h3> Quick Guide </h3>
                 <strong>Terminal 1</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Terminal 2</strong>
-                <br> <strong> 1. </strong> <code> source docker_ros2.sh </code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br> <strong> 1. </strong> <code> source docker_ros2.sh </code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
                 <strong> 2. </strong> <code> docker ps -a </code>
                 <br> <strong> 4. </strong> <code> exit </code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <strong> 3. </strong> <code> docker exec -it "container_ID" /bin/bash </code>
