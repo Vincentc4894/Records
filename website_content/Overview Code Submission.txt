@@ -40,7 +40,7 @@
                 <div> Robot O-Led </div>
                 <ul>
                 <li> Located on the right side (facing) of the robot. </li>
-                <li> Displays robot/raspberry pi info, such as Robot Address, </li>
+                <li> Displays robot/raspberry pi info, such as Robot Address, CPU Usage, Memory, etc. </li>
                 </ul>
                 <div> Wheels and Treads </div>
                 <ul>
@@ -64,12 +64,13 @@
 
                 <h2> Software </h2>
                 <p> Here will list most of the software you will use while using this robot: </p>
-                <div> Python (via Jupyter) </div>
+                <div> Python (via JupyterLab) </div>
                 <ul>
-                <li> You will be using Jupyter to write and run Python script for your robot. </li>
-                <li> This will allow you to do things from simply moving your bot to making it able to navigate full obstacle courses and more </li>
+                <li> You will be using JupyterLab to write and run Python script for your robot. </li>
+                <li> This will allow you to do things from simply moving your bot to making it able to navigate full obstacle courses and more. </li>
                 <li> Python is one of the most beginner friendly coding languages, so don't be intimidated with coding, it starts very easy. </li>
                 <li> You will be given starter code snippits and segments if you look throughout the <strong>Basic Examples</strong> and <strong>Advance Samples</strong> tabs so use those to your advantage. </li>
+                <li> There is also pre-existing code already on your robot you can access in JupyterLab </li>
                 </ul>
                 <div> ROS2 </div>
                 <ul>
@@ -80,10 +81,12 @@
                 <ul>
                 <li> Used as a deployment environment. </li>
                 <li> Secure, reproducable, and self-contained. </li>
+                <li> Entered through terminals and able to run multiple seperate operations </li>
                 </ul>
                 <h2> Last Notes </h2>
                 <ul>
                 <li> Make sure to re-read the <strong> Important Notes before Operation </strong> section again because they are good things to remember. </li>
+                <li> The <strong> Getting Started </strong> tab will take you through setting up the Raspbot, Dockers, JupyterLab, and other operations you'll need to know </li>
                 <li> Read your lab/assignment instructions twice before starting. It's better to go slow than do things over again because you messed up. </li>
                 <li> If you ever get overwelmed by anything, check the other tabs in this webpage. 
                     <ul>
@@ -95,6 +98,5 @@
                 </li>
                 <li> Go to your TA's or Professor with any questions or clarifications. </li>
                 <ul>
-
                 `
             },
