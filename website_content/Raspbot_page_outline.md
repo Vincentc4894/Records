@@ -28,6 +28,7 @@
     <h3> camera </h3>
 <h1> Advanced Examples </h1>
     - These will be explanations/guides to Yahboom's provided examples
+    <br> (Tyler Yarbrough, Started not finished)
     <h3> Python </h3>
         <h5> ultrasonic obstacle avoidance (see lab 5) </h5>
     <h3> ROS2 </h3>
