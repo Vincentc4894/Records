@@ -1,0 +1,158 @@
+            {
+                id: 'motor-control',
+                label: 'Motor Control',
+                content: `<h1>Motor Control</h1>
+                    <h3>1. Ensure that Raspbot_Lib library functions is properly installed.</h3>
+                    <p>Raspbot Driver function are required. <br>
+                    If you do not have it properly install, click the link below. <br>
+                    <a link href="https://www.yahboom.net/study/Raspbot" target = "_blank" style = "color: blue";> Library Installation Link</a>
+                    </p>
+
+                    <h3>2. Core functions </h3>
+                    <p>This repository is made with Raspbot v2 in mind, so you generally be using McLumk_Wheel_Sports library functions for movement as they are prebuilt functions made with Mecanum wheels in mind.<br>
+                    Mecanum wheel have a roller containder a smaller roller placed at 45% degreess disbursting force as depicted by the image below. <br>
+                    <img src= "Images/Mecanum_force.png" alt = "Mecanum_force" width ="500"><br>
+                    But if you want to apply this to Raspbot in general or use costum angles for movement, you will be using the core functions.<br>
+                    The following image display the where each motor is and their corresponding ID.<br>
+                    <img src= "Images/Motor_Display.png" alt = "Mecanum_force" width ="500"><br>
+                    If your confused at what your looking at, use these relationships<br>
+                    Front left = M1<br>
+                    Front right = M2<br>
+                    Back left = M3<br>
+                    Back right = M4</p>
+                    <p>Methods:</p>
+                    <pre>Ctrl_Muto(int motor_id, int motor_speed)</pre>
+
+                    <p>The method preforms a action withh the corresponding motor ID.<br>
+                    The motor_speed is ranges form -255 to 255.<br>
+                    With positive speed to rotate forward, negative speed to rotate backwards, and 0 to stop.</p>
+
+                    <pre>Ctrl_Car(int motor_id, motor_dir, int motor_speed):</pre>
+                    <p>The function accomplish the same task as Ctrl_Muto so use methods based on preference.<br>
+                    motor_dir can be 0(forward rotation) or 1(reverse rotation).<br>
+                    The motor_speed is ranges form 0 to 255.<br> 
+
+                    You can use both function interchangably like this. <br>
+                    Ctrl_Muto(M2, -100) is the equalivalent to Ctrl_Car(M2, 1, 100).<br>
+                    <br>
+                    while Ctrl_Muto and Ctrl_Car only controls one motor, calling the method 4 times allow you to move the raspbot in cretain direction.<br>
+                    Refer to this table to make movement using Ctrl_Muto. Note: this table uses Mecanum wheels<br>
+                    The speed must range form -255 to 255</p>
+
+                    <table class = "motor_table">
+                        <thead>
+                            <th scope = "col">Motion</th>
+                            <th scope = "col">M1</th>
+                            <th scope = "col">M2</th>
+                            <th scope = "col">M3</th>
+                            <th scope = "col">M4</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Forward</td>
+                                <td>+</td>
+                                <td>+</td>
+                                <td>+</td>
+                                <td>+</td>
+                            </tr>
+                            <tr>
+                                <td>Backward</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Left Translation</td>
+                                <td>-</td>
+                                <td>+</td>
+                                <td>+</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Right Translation</td>
+                                <td>+</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>+</td>
+                            </tr>
+                            <tr>
+                                <td>Left Front</td>
+                                <td>0</td>
+                                <td>+</td>
+                                <td>+</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>left Rear</td>
+                                <td>+</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>+</td>
+                            </tr>
+                            <tr>
+                                <td>Right Front</td>
+                                <td>+</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>+</td>
+                            </tr>
+                            <tr>
+                                <td>Right Rear</td>
+                                <td>0</td>
+                                <td>+</td>
+                                <td>+</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Counterclockwise Rotation<br>(Left Rotation)</td>
+                                <td>-</td>
+                                <td>+</td>
+                                <td>-</td>
+                                <td>+</td>
+                            </tr>
+                            <tr>
+                                <td>Clockwise Rotation<br>(Right rotation)</td>
+                                <td>+</td>
+                                <td>-</td>
+                                <td>+</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Stop</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>3. Sample Code with Raspbot Standard library</h3>
+                    <pre></pre>
+
+                    <h3>4. McLumk_Wheel_Sports library functions</h3>
+                    <p>You do not have to install a new library because it comes with Raspbot_lib.<br>
+                    Instead of manually coding motor movement using the functions listed under Core functions.<br>
+                    McLumk_Wheel_Sports library already cotains code for general movement with Mecanum wheels.<br>
+                    The following list are library function that are controlled by the parameter speed. <br>
+                    The name of the method implies the direction the bot would move in.<br>
+                    The speed is need to be form 0 to 255. With 0 to stop and bigger number resulting in higher speed.</p>
+
+                    <pre>move_forward(int speed)
+move_backward(int speed)
+move_right(int speed)
+move_left(int speed)
+move_diagonal_left_front(int speed)
+move_diagonal_right_front(int speed)
+move_diagonal_left_back(int speed)
+move_diagonal_right_back(int speed)</pre>
+
+                    <p>These next 2 function are for rotation.</p>
+                    <pre>rotate_right(speed)
+rotate_left(speed)</pre>
+
+                    <h3>Sample code with McLumk_Wheel_Sports library functions<h3>
+                    <pre></pre>
+                `
+            },

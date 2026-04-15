@@ -1,0 +1,81 @@
+
+/*camera table*/
+.camera_table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+.camera_table tr :nth-child(2),
+.camera_table tr :nth-child(3) {
+  text-align: center;
+  width: 38%;
+}
+
+.camera_table tr :nth-child(1),
+.camera_table tr :nth-child(4) {
+  text-align: center;
+  width: 12%;
+}
+  
+.camera_table table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+
+.camera_table th,
+.camera_table td {
+  vertical-align: top;
+  padding: 0.3em;
+  border: 1px solid #000000;
+}
+
+.camera_table tbody tr:nth-child(odd) {
+  background-color: #b4b2a8;;
+}
+
+/*motor table*/
+.motor_table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+.motor_table tr :nth-child(2),
+.motor_table tr :nth-child(3),
+.motor_table tr :nth-child(4),
+.motor_table tr :nth-child(5) {
+  text-align: center;
+  width: 15%;
+}
+
+.motor_table tr :nth-child(1) {
+  text-align: center;
+  width: 40%;
+}
+  
+.motor_table table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+
+.motor_table th,
+.motor_table td {
+  vertical-align: top;
+  padding: 0.3em;
+  border: 1px solid #000000;
+}
+
+.motor_table tbody tr:nth-child(odd) {
+  background-color: #b4b2a8;;
+}

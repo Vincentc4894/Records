@@ -1,0 +1,121 @@
+            {
+                id: 'Camera',
+                label: 'Camera',
+                content: `<h1>Camera</h1>
+                    <h3>1. OPenCV</h3>
+                    <p>OpenCV stands for Open source Computer Vision Library.<br>
+                    OpenCV library contains methods for computational vision using the primary colors R,G,B.<br>
+                    While OpenCV may contain functions that displays images as well as images processing with target detection, we will primarily focus on method that help boot up a camera for this page.<br>
+                    As such, if you want to dive deeper into OpenCV, you may want to check out their offical page: 
+                    <a link href="https://opencv.org/" target = "_blank" style = "color: blue"; >OpenCV</a>.<br>
+                    For Installation of OpenCV Library visit: 
+                    <a link href="https://docs.opencv.org/4.x/d0/d3d/tutorial_general_install.html" target = "_blank" style = "color: blue"; >OpenCV Installation</a>.<br>
+                    For specifically all method related to this camera page visit: 
+                    <a link href="https://docs.opencv.org/3.4/d8/dfe/classcv_1_1VideoCapture.html" target = "_blank" style = "color: blue"; >OpenCV Methods</a>.<br>
+                    </p>
+
+                    <h3>2.Core functions </h3>
+                    <pre>cv2.VideoCapture(int argument)</pre>
+
+                    <p>To connect to default camera or Raspberry Pi video, use set argument = 0.</p>
+                    
+                    <pre>camera.set(int setting, int numeric_value)</pre>
+
+                    <p>These are common configuration you can set if your camera seems off.<br>
+                    the number on the left represent what your modifying and what you put in place of settings.<br>
+                    We've listed the common configuretion. Not recommend to modify setting outside of these value.<br>
+                    Note: Not all method are supported by the camera. So you might not be able to modify the hue, saturation, and etc.</p>
+
+                    <table class = "camera_table">
+                        <thead>
+                            <tr>
+                                <th scope = "col">Setting value</th>
+                                <th scope = "col">Setting name</th>
+                                <th scope = "col">Functionality</th>
+                                <th scope = "col">Common Values</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3</td>
+                                <td>CV_CAP_PROP_FRAME_WIDTH</td>
+                                <td>Width in frames</td>
+                                <td>1920</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>CV_CAP_PROP_FRAME_HEIGHT</td>
+                                <td>Height in frames</td>
+                                <td>1080</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>CV_CAP_PROP_FPS</td>
+                                <td>Frame Rate</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>CV_CAP_PROP_BRIGHTNESS</td>
+                                <td>Brightness of image</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>CV_CAP_PROP_CONTRAST</td>
+                                <td>Contrast of image</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>CV_CAP_PROP_SATURATION</td>
+                                <td>Saturation of image</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>CV_CAP_PROP_HUE</td>
+                                <td>Hue of images</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>CV_CAP_PROP_EXPOSURE</td>
+                                <td>Exposure</td>
+                                <td>50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>You may have notice that we skipped some setting value.<br>
+                    That because there are other setting that exist on OpenCV but doesn't modify them unless you need to.<br>
+                    To find all camera setting you can adjust visit: 
+                    <a link href="https://docs.opencv.org/3.4/d4/d15/group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da7c2fa550ba270713fca1405397b90ae0" target = "_blank" style = "color: blue"; >OpenCV</a>
+                    </p> 
+
+                    <pre>camera.isOpened()</pre>
+                    <p>Boolean function that returns true if success and false otherwise</p>
+
+                    <pre>ret,frame = camera.read()</pre>
+                    <p>Read the video a frame at a time and return information storted in variable ret and frame.<br>
+                    Variable rat is a boolean value that return true if it read the file to the end and false otherwise.<br>
+                    Variable frame is the image processed in a single frame represented though a 3-D matrix</p>
+
+                    <pre>cv2.waitKey()</pre>
+                    <p>Put a postive numerical value to to cause a delay.<br>
+                    cv2.waitKey(1) causes a delay of 1ms between each frame.<br>
+                    Avoid setting a large number in waitKey like 1000 or it might feel like it's stuck or lagging.<br>
+                    Setting the value to 0 would make the video pause on it's current frame.</p>
+
+                    <pre>camera.release() and destroyAllWindows() </pre>
+                    <p>camera.release() releases the video.<br>
+                    destroyAllWindows() closes all image windows.<br>
+                    When runing any code involving getting and opening camera file, always run the program until completion.<br>
+                    If you don't run the program to camera.release and destroyAllWindows, it will hold the camera file in the background.<br>
+                    This will cause future program to be denied access when searching for the camera file.</p>
+
+                    <h3>Sample code with OpenCV functions to open camera<h3>
+                    <pre></pre>
+
+                `        
+            },
