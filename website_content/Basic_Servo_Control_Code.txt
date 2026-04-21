@@ -1,0 +1,24 @@
+import time
+from Raspbot_Lib import Raspbot
+from ipywidgets import interact
+import ipywidgets as widgets
+
+# create bot object
+bot = Raspbot()
+
+def pwm_servo(S1, S2):
+    bot.Ctrl_Servo(1, S1)
+    bot.Ctrl_Servo(2, S2)
+
+    return S1, S2
+
+# create two sliders for control
+interact(pwm_servo, \
+         S1=widgets.IntSlider(min=0,max=180,step=1,value=90), \
+         S2=widgets.IntSlider(min=0,max=110,step=1,value=25));
+
+#reset
+bot.Ctrl_Servo(1, 90)
+bot.Ctrl_Servo(2, 25)
+#After the program is complete, delete the object to avoid conflicts caused by using the library in other programs
+del bot
