@@ -18,16 +18,18 @@
 <h1> Basic Examples (Python) </h1>
     - provide minimal code examples to interact with each aspect of the bot
     <h3> Read/write motor </h3>
-    <p>(Vincent Cheng, mostly done just need to attach links, images, and sample code.)</p>
+    <p>(Vincent Cheng, done just need sample code.)</p>
     <h3> basic move (forward, left, right, etc) </h3>
-    <p>(Vincent Cheng, mostly done just need to attach links, images, and sample code.)</p>
+    <p>(Vincent Cheng, done just need sample code.)</p>
     <h3> read/write camera servos </h3>
+    <p>(Vincent Cheng, done just need sample code.)</p>
     <h3> control buzzer </h3>
     <h3> control light bar </h3>
     <h3> ultrasonic </h3>
+    <p>(Vincent Cheng, done just need sample code.)</p>
     <h3> IR </h3>
     <h3> camera </h3>
-    <p>(Vincent Cheng, mostly done just need to attach links, images, and sample code.)</p>
+    <p>(Vincent Cheng, done just need sample code.)</p>
 <h1> Advanced Examples </h1>
     - These will be explanations/guides to Yahboom's provided examples
     <br> (Tyler Yarbrough, Started not finished)
