@@ -100,7 +100,7 @@
                     <p>Read the video a frame at a time and return information storted in variable ret and frame.<br>
                     Variable rat is a boolean value that return true if it read the file to the end and false otherwise.<br>
                     Variable frame is the image processed in a single frame represented though a 3-D matrix<br>
-                    Linux users: There has been cases when rate return false even though it successfully read the file.</p>
+                    Linux users: There has been cases when ret return false even though it successfully read the file.</p>
 
                     <pre>cv2.waitKey()</pre>
                     <p>Put a postive numerical value to to cause a delay.<br>
