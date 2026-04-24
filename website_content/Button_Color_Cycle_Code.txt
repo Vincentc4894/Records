@@ -1,0 +1,25 @@
+from Raspbot_Lib import Raspbot,LightShow
+from ipywidgets import interact
+import ipywidgets as widgets
+import time
+bot = Raspbot()
+
+colors = [0, 1, 2, 3, 4, 5, 6, 7] # Red, Green, Blue, Yellow, Purple, Cyan, White, Off
+current_color = 0
+key_down = False
+while True:
+        data = bot.read_data_array(0x0d, 1)
+        state = data[0]
+
+        # Switch color only when the key changes from unpressed to pressed
+        if state == 1 and not key_down:
+            current_color = (current_color + 1) % len(colors)
+            if(current_color==7):
+                 bot.Ctrl_WQ2812_ALL(0,0)
+            else :
+                 bot.Ctrl_WQ2812_ALL(1, colors[current_color])
+
+            key_down = True  
+
+        if state == 0 and key_down:
+            key_down = False  

@@ -1,0 +1,143 @@
+            {
+                id: 'advanced_examples',
+                label: 'Advanced Examples',
+                content: `
+                <h1> Advanced Examples </h1>
+                <h2> Introduction </h2>
+                <p> In this section, there will be information about advanced applications and features of the Raspbot V2 that may be useful to know for your class. 
+                <ul> <li> These include ultrasonic sensors using Python being applied for obstacle avoidance and gesture recognition through ROS2 and the camera, both of which are used in Lab 5. </li> </ul>
+
+                <h2> Ultrasonic Sensor </h2>
+                <p> The Ultrasonic Sensor is a python script located in JupyterLab. You'll be able to run it in JupyterLab. For more information, see Lab 5 Task 2. </p>
+                <p> The code for the Ultrasonic sensor obstacle avoidance should be able to be found in:
+                <p>Code path: <code>/home/pi/project_demo/05.Comprehensive_gameplay/2.ultrasonic_obstacle_avoidance.ipynb</code></p>
+                <pre><code>#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import sys
+sys.path.append('/home/pi/project_demo/lib')
+#Import Mecanum Car Driver Library
+from McLumk_Wheel_Sports import *
+
+# Constants related to the ultrasonic sensor
+NEAR_DISTANCE = 200 # Define near distance threshold (millimeters)
+FAR_DISTANCE = 425 # Define far distance threshold (millimeters)
+
+def car_avoid():
+
+# Reading distance from ultrasonic sensor
+diss_H =bot.read_data_array(0x1b,1)[0] diss_L 
+=bot.read_data_array(0x1a,1)[0] dis = diss_H << 8 | diss_L 
+# Printing distance 
+print(f"Ultrasonic Distance: {dis} mm") time.sleep(0.05)
+# Read the distance every 1 second 
+if dis < NEAR_DISTANCE: 
+print(f "Obstacle is very close, distance: {dis} mm") 
+move_backward(speed) time.sleep(0.1) 
+elif NEAR_DISTANCE <= dis <= FAR_DISTANCE: 
+print(f"Obstacle is at medium distance, distance: {dis} mm") 
+stop_robot() time.sleep(0.2) rotate_left(speed) time.sleep(0.15) 
+elif FAR_DISTANCE < dis:
+print(f"No obstacle, distance: {dis} mm")
+move_forward(speed)
+
+else:
+print("Unknown situation, stopping")
+stop_robot()
+time.sleep(0.2)
+
+speed = 20 # Set vehicle speed
+
+try:
+# Turn on the ultrasonic ranging function
+bot.Ctrl_Ulatist_Switch(1)
+time.sleep(0.1) # Give the ultrasonic sensor some time to measure
+while True:
+car_avoid()
+
+except KeyboardInterrupt:
+# When the user interrupts the program, ensure all motors stop
+bot.Ctrl_Ulatist_Switch(0)
+time.sleep(0.1)
+stop_robot()
+print("Ending")</code></pre>
+                <p> Now this is very confusing to see at first but let's break it down into smaller pieces. </p>
+                <br>
+                <pre><code>#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import sys
+sys.path.append('/home/pi/project_demo/lib')
+#Import Mecanum Car Driver Library
+from McLumk_Wheel_Sports import *</code></pre>
+                <p> This is basically saying telling the program to import the wheel moving code so the Raspbot can move around without you having to write the code yourself.</p>
+                <br>
+                <pre><code># Constants related to the ultrasonic sensor
+NEAR_DISTANCE = 200 # Define near distance threshold (millimeters)
+FAR_DISTANCE = 425 # Define far distance threshold (millimeters)</code></pre>
+                <p> This is really self explanitory, it gives the minimum (NEAR_DISTANCE) and maximum (FAR_DISTANCE) object detection range, changing these values will change the area in which the Raspbot can detect an object.</p>
+                <br>
+                <pre><code>def car_avoid():
+
+# Reading distance from ultrasonic sensor
+diss_H =bot.read_data_array(0x1b,1)[0] diss_L 
+=bot.read_data_array(0x1a,1)[0] dis = diss_H << 8 | diss_L 
+# Printing distance 
+print(f"Ultrasonic Distance: {dis} mm") time.sleep(0.05)
+# Read the distance every 1 second 
+if dis < NEAR_DISTANCE: 
+print(f "Obstacle is very close, distance: {dis} mm") 
+move_backward(speed) time.sleep(0.1) 
+elif NEAR_DISTANCE <= dis <= FAR_DISTANCE: 
+print(f"Obstacle is at medium distance, distance: {dis} mm") 
+stop_robot() time.sleep(0.2) rotate_left(speed) time.sleep(0.15) 
+elif FAR_DISTANCE < dis:
+print(f"No obstacle, distance: {dis} mm")
+move_forward(speed)
+
+else:
+print("Unknown situation, stopping")
+stop_robot()
+time.sleep(0.2)</code></pre>
+                <p> First, this segment defines the <i> car_avoid() </i> function. This function will print the distance of an object detected by the ultrasonic detector. Then, 
+                <ul>
+                <li> If the object is closer than the NEAR_DISTANCE defined earlier, it will print "Obstacle is very close" and move backwards. </li>
+                <li> If the object is between NEAR_DISTANCE and FAR_DISTANCE, it will print "Obstacle is at medium distance", stop and turn left. </li>
+                <li> If the object is further than the FAR_DISTANCE, it print "No obstacle" and continue moving forward." </li>
+                </ul>
+                <p> Finally, if an undefined situation appears, meaning there is some sort of error happening, it will print "Unknown situation, stopping" and stop the robot.
+                <br>
+                <pre><code>try:
+# Turn on the ultrasonic ranging function
+bot.Ctrl_Ulatist_Switch(1)
+time.sleep(0.1) # Give the ultrasonic sensor some time to measure
+while True:
+car_avoid()
+
+except KeyboardInterrupt:
+# When the user interrupts the program, ensure all motors stop
+bot.Ctrl_Ulatist_Switch(0)
+time.sleep(0.1)
+stop_robot()
+print("Ending")</code></pre>
+                <p> This turns on the Ultrasonic sensor to find the range of objects and let's it set itself up. Then it keeps running the car_avoid() function defined earlier. It will stop once it get's interrupted by the keyboard input which it will then shut down all functions it booted to run this program. </p>
+                <h3> Summary </h3>
+                <p> This program will keep moving the raspbot forward until it gets too close to an object, designated by NEAR_DISTANCE and FAR_DISTANCE and it will turn left and continue forward. </p>
+                
+                
+                <h2> Gesture Recognition </h2>
+                <p> The Gesture Recognition program must be accessed through docker containers. For more information see Lab 5 Task 3 and the Getting Started Tab. </p>
+                <p> The location of the function source code is located in <i> /root/yahboomcar_ws/src/yahboomcar_mediapipe/yahboomcar_mediapipe/ </i> </p>
+                <p> Upon opening the program and placing your hand in front of the camera, something like this should appear: <br>
+                <img src= "Images/Gesture_Recognition_Live.png" alt = "Gesture_Recognition" width ="500"><br>
+                <p> The program imports a library to see and track the palm and fingers and outputs according to locations of those palm and finger inputs.
+                <ul>
+                <li> from media_library import * #This library contains functions such as detecting hands and getting gestures </li>
+                <li> Getting Finger data <pre><code>frame, lmList, _ = self.hand_detector.findHands(frame)
+fingers = self.hand_detector.fingersUp(lmList)
+sum(fingers)
+fingers[]</code></pre></li>
+                </ul>
+                <p> The program has a flow like this:
+                <img src= "Images/Gesture_Recognition_Flow.png" alt = "Gesture_Recognition" width ="500"><br>
+
+                `
+            },
