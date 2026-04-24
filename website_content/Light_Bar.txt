@@ -1,0 +1,47 @@
+{
+                id: 'Light Bar Control',
+                label: 'Light Bar Contro',
+                content: `<h1>Light Bar Contro</h1>
+                    <h3>1. Preperations</h3>
+                    <p>RGB light bar needs to be connected to the RGB interface</p>
+                    <h3>2. Core Functions</h3>
+                    <p>Raspbot_lib is a required library to control the RGB light bar.<br>
+                    If you installiation isn't complete follow this guide: 
+                    <a link href="https://www.yahboom.net/public/upload/upload-html/1725346805/1.%20Install%20Raspbot%20V2%20driver%20library.html" target = "_blank" style = "color: blue";> Library Installation Link</a>
+                    </p>
+                    <pre>Ctrl_WQ2812_ALL(state,color)</pre>
+                    <p>state can be set to 1(turn on light display) or 0(turn off light display)<br>
+                    color can be set to any number form 0 to 7.<br>
+                    0.Red <br>
+                    1.Green <br>
+                    2.Blue <br>
+                    3.Yellow <br>
+                    4.Purple <br>
+                    5.Cyan <br>
+                    6.White <br>
+                    7.Turn off <br>
+                    Doesn't return anything</p>
+
+                    <pre>Ctrl_WQ2812_brightness_ALL(R,G,B)</pre>
+                    <p>Used to set custom RGB value.<br>
+                    Can be set to any value between 0 to 255.</p>
+
+                    <pre>execute_effect(effect_name, effect_duration, speed, current_color)</pre>
+                    <p>Used to control lighting effect.<br>
+                    effect_name can be set to any one of these: [gradient, river, random_running, starlight, breathing]<br>
+                    effect_duration. used to set duration but can't not be set to negative values.<br>
+                    speed. used to set lighting speed with smaller value being faster but can't be set to negative values<br>
+                    current_color. only valid during breathing mode. Can be set to any value form 0 to 6(same as previous function but no 7).<br>
+                    0.Red <br>
+                    1.Green <br>
+                    2.Blue <br>
+                    3.Yellow <br>
+                    4.Purple <br>
+                    5.Cyan <br>
+                    6.White </p>
+
+                    <h3>2. Sample Code</h3>
+                    <pre></pre>
+
+                    `
+            }

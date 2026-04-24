@@ -24,23 +24,15 @@
                 0x1b stores the high byte (upper 8 bytes) and 0x1a stores the low(lower 8 bits)
                 </p>
 
+                <h3>3. Sample code</h3>
+                <p>For this sample code, we're only going to turn on the ultrasound to retrieve information.<br>
+                We're not doing to do anything with the information we get beside printing the distance form our robot.<br>
+                We will later explore write code using distance as a condition in Ultrasonic Avoidance</p>
+
                 <h3>3.Ultrasonic Avoidance</h3>
                 <p> Let try having camera avoid obstales it comes across by turn to the left.<br>
-                when the object distance is too close(under the distance we set) turn the car to the left.
-                </p>
-
-                <h1>4. Sample Code</h1>
-                <pre></pre>
-
-                <h3>3.Ultrasonic Follow</h3>
-                <p>
-                For this implementation, We're going to use the ultsonic to find the distance between the robot and the obstacle.<br>
-                If the distance is within the range we set, the robot would follow(move forward).<br>
-                If the distance is larger than the range we given it, it will stop.<br>
-                If the distance is smaller than the range we given it, it will retreat(move backwards)<br>
-                </p>
-
-                <h1>4. Sample Code</h1>
-                <pre></pre>
-                `
+                when the object distance is too close(under the distance we set) turn the car to the left.<br>
+                For more details and the sample code, refer to the advance examples tab where we have a dedicate page for this.<br>
+                //link to be added: <a link href="" target = "_blank" style = "color: blue"; >Take me to Advance examples</a>
+                </p>                `
             }
