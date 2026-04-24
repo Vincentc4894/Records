@@ -1,0 +1,19 @@
+{
+                id: 'Buzzer Control',
+                label: 'Buzzer Control',
+                content: `<h1>Buzzer Control</h1>
+                    <p>No external component is need as the buzzer is one of the onboard components.</p>
+                    <h3>1. Core Functions</h3>
+                    <p>Raspbot_lib is a required library to control the buzzer.<br>
+                    If you installiation isn't complete follow this guide: 
+                    <a link href="https://www.yahboom.net/public/upload/upload-html/1725346805/1.%20Install%20Raspbot%20V2%20driver%20library.html" target = "_blank" style = "color: blue";> Library Installation Link</a>
+                    </p>
+                    <pre>Ctrl_BEEP_Switch(state)</pre>
+                    <p>state can be set to 1(ON: always ringing) or 0(OFF)<br>
+                    Doesn't return anything</p>
+
+                    <h3>2. Sample Code</h3>
+                    <pre></pre>
+
+                    `
+            }
